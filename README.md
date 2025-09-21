@@ -1,63 +1,69 @@
-# QnA-ChatBot
+📚 Q&A Documentation Chatbot
 
-An AI-powered PDF assistant using **Retrieval-Augmented Generation (RAG)** to provide accurate, context-aware answers from your documents.
+A conversational chatbot designed to answer documentation-based questions using Ollama (Mistral), LangChain, Streamlit, and ChromaDB.
 
+🚀 Features
 
+🤖 LLM-powered Responses using Ollama (Mistral model)
 
-## PDF QA Chatbot (RAG-based LLM)
+🔗 LangChain Integration for building retrieval-augmented generation (RAG) pipelines
 
-A **RAG-powered chatbot** that allows you to upload any PDF and get **accurate, context-aware answers** to your questions. Built using **LangChain**, **Ollama Phi-3**, **Chroma**, and **Streamlit**.
+📂 ChromaDB as vector database for storing embeddings
 
+🌐 Interactive UI with Streamlit
 
+🔍 Semantic Search over documentation for accurate answers , Multi-document support
 
-## Features
+🛠️ Tech Stack
 
-- 📄 **PDF Upload & Parsing**: Upload any PDF, automatically split into chunks for semantic retrieval.  
-- 🧠 **Vector Embeddings**: Uses `OllamaEmbeddings` to convert document chunks into vectors for retrieval.  
-- 🔍 **RAG-based Question Answering**: Answers questions based solely on the content of the uploaded PDF.  
-- 🖥 **Interactive UI**: Streamlit interface for easy question input and answer display.  
+Frontend/UI: Streamlit
 
+Backend/Logic: Python, LangChain
 
+LLM Engine: Ollama (Mistral)
 
-## Tech Stack
+Database: ChromaDB (vector storage)
 
-- **Python**  
-- **Streamlit** for UI  
-- **LangChain** for RAG pipelines  
-- **Ollama Phi-3** for embeddings & LLM  
-- **Chroma** as vector store  
+📂 Project Structure
+chatbot-project/
+│── app.py              # Streamlit app entry point
+│── requirements.txt    # Dependencies
+│── README.md           # Project documentation
 
+⚙️ Installation & Setup
 
+Clone the repository
 
-## Usage
-
-### 1. Clone the repository
-
-```bash
-git clone <repo-url>
-cd <repo-folder>
-```
-
+git clone https://github.com/your-username/chatbot-project.git
+cd chatbot-project
 
 
-### 2. Install dependencies:
+Create a virtual environment & install dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
 
-### 3. Install Ollama and download Phi-3 model:
-Note: The app uses a local Ollama model, so ensure Phi-3 is installed on the machine where you run the app.
+Run Ollama with Mistral model
 
-```bash
-ollama pull phi3
-```
+ollama run mistral
 
-### 4. Run the app:
 
-```bash
+Start the Streamlit app
+
 streamlit run app.py
-```
 
-### 5. Upload a PDF and start asking questions!
+💡 Usage
+
+Upload or connect documentation files into the docs/ folder
+
+The chatbot indexes them into ChromaDB
+
+Ask any question in the Streamlit UI and get relevant answers
+
+🔮 Future Enhancements
+
+Enable fine-tuning with domain-specific data
+
+🤝 Contribution
+
+Feel free to fork, open issues, or submit PRs to improve this project.
